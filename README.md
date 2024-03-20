@@ -40,7 +40,7 @@ cd <lRPC-SRC-DIR>; mkdir build; cd build; cmake ..; make -j
 
 
 ### How to Run Test Code
-A simple ping-pong client/server RPC application is included in the repository, named lrpc_ofi_client and lrpc_ofi_server, and built as part of above installation steps. To run, one would start a server instance, and then start the client by pointing it to the IP address of the server. User can choose the addresses belonging to the network interface of choice and further direct OFI to use a specific fabric provider using FI_PROVIDER environment variable. More information on libfabric configuration can be found [here](https://ofiwg.github.io/libfabric/main/man/fabric.7.html). Client arguments are ./lrpc_of_client [server name/IP] [iteration_count] [RPC_interarrival_us]
+A simple ping-pong client/server RPC application is included in the repository, named lrpc_ofi_client and lrpc_ofi_server, and built as part of above installation steps. To run, one would start a server instance, and then start the client by pointing it to the IP address of the server. User can choose the addresses belonging to the network interface of choice and further direct OFI to use a specific fabric provider using FI_PROVIDER environment variable. More information on libfabric configuration can be found [here](https://ofiwg.github.io/libfabric/main/man/fabric.7.html). 
 
 ```
 # USAGE
@@ -53,5 +53,5 @@ Server: FI_PROVIDER=verbs ./lrpc_ofi_server
 Client: FI_PROVIDER=verbs ./lrpc_ofi_client 192.168.1.1 10000 100
 ```
 
-Upon completing iterations, client will print out RTT latency histogram (values in nanoseconds) for completed RPC requests. RPC latency performance depends on the choice and configuration of the platform, network interface, OFI provider, etc. Using a typical modern pair of Xeon servers connected to each other with a dedicated IBVERBS capable 100 GbE Ethernet interface with ~5us average baseline ping-pong RTT latency performance (i.e. ibv_rc_pingpong) typically results in ~10us median lRPC RTT latency performance in our tests with VERBS OFI provider.
+Upon completing iterations, client will print out RTT latency histogram (values in nanoseconds) for completed RPC requests. RPC latency performance depends on the choice and configuration of the platform, network interface, OFI provider, etc. Using a typical modern pair of Xeon servers connected to each other with a dedicated IB VERBS capable 100 GbE Ethernet interface with ~5us average baseline ping-pong RTT latency performance (i.e. ibv_rc_pingpong) typically results in ~10us median lRPC RTT latency performance in our tests with VERBS OFI provider.
 
