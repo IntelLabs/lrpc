@@ -1,3 +1,5 @@
+//Copyright(C) 2022 Intel Corporation
+//SPDX-License-Identifier: Apache-2.0
 #ifndef LRPC_INTERNAL_COMPILER_CPP_PLUGIN_H
 #define LRPC_INTERNAL_COMPILER_CPP_PLUGIN_H
 

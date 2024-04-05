@@ -1,3 +1,4 @@
+// https://github.com/erpc-io/eRPC/blob/master/LICENSE
 // Adopated from eRPC (https://github.com/erpc-io/eRPC)
 #pragma once
 

@@ -1,3 +1,5 @@
+//Copyright(C) 2022 Intel Corporation
+//SPDX-License-Identifier: Apache-2.0
 #ifndef _IRPC_OFI_UTIL_H_
 #define _IRPC_OFI_UTIL_H_
 
