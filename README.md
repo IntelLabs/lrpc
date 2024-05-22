@@ -56,5 +56,6 @@ Client: FI_PROVIDER=verbs ./lrpc_ofi_client 192.168.1.1 10000 100
 Upon completing iterations, client will print out RTT latency histogram (values in nanoseconds) for completed RPC requests. RPC latency performance depends on the choice and configuration of the platform, network interface, OFI provider, etc. 
 
 Using a typical modern pair of Xeon servers connected to each other with a dedicated IB VERBS capable 100 GbE Ethernet interface with ~5us average baseline ping-pong RTT latency performance (i.e. ibv_rc_pingpong) typically results in ~10us median lRPC RTT latency performance in our tests with VERBS OFI provider. Examples from round-trip ping-pong RPC latency measurements for lRPC at different load points are depicted in below figure, in comparison with C-based gRPC v1.51 tested using the same server pair and configuration. lRPC presents clear advantages not only in the average latency, but also in the latency tail distribution.
-![lRPC vs gRPC](lRPC-vs-gRPC.png)
+
+<img src="https://raw.githubusercontent.com/IntelLabs/lrpc/main/lRPC-vs-gRPC.png" width="50%"/>
 
